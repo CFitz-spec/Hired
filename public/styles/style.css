@@ -1,0 +1,183 @@
+html{
+    background-color: aliceblue;
+}
+#landing{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+#backGroundLanding{
+background-color: aliceblue;
+display: flex;
+flex-direction: column;
+}
+#landingImage{
+    height: 15rem;
+}
+.titleContainer{
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.title{
+    width: max-content;
+}
+.searchContainer{
+    justify-content: space-evenly;
+}
+#form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#keyword{
+  width: -webkit-fill-available;
+  border: auto;
+  margin-bottom: 10px;  
+} 
+#location{
+    width: -webkit-fill-available;
+    border: auto;
+    margin-bottom: 10px;
+}
+
+.overflow-hidden{
+    zoom: 0.5;
+    max-height: 30vh;
+}
+
+#topNavBar{
+--bs-bg-opacity: 1;
+    background-color: rgb(228 37 136) !important;
+}
+#icon
+{
+    width: auto;
+    height: 5vh;
+}
+#navbar-brand{
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: x-large;
+}
+#text{
+    color: white;
+}
+
+.resultsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #FFEA00;
+    padding-top: 5px;
+    padding-bottom: 3rem;
+}
+#pagingSearch{
+    height: 6rem;
+    display: flex;
+}
+
+.card-title{
+    text-wrap: wrap;
+}
+
+.card-link{
+    background-color: rgb(228 37 136);
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    width: auto;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: small;
+    color: white;
+}
+p{
+        font-family: "Sono", monospace;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+          "MONO" 1;
+}
+p.card-text{
+    font-size: small;
+}
+.card-text {
+    height: 15vh;
+    overflow: auto;
+}
+.card{
+
+
+width: -webkit-fill-available;
+    border-width: medium;
+    box-shadow: 5px 5px black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.footer{
+
+   bottom: 0; 
+   left: 0; 
+   z-index: 10;
+   display: flex;
+   width: -webkit-fill-available;
+   height: 3rem;
+   background-color:rgb(228 37 136) ;
+   justify-content: center;
+   align-items: center;
+  
+
+}
+#pagingSearch{
+    justify-content: center;
+    gap: 5rem;
+    width: -webkit-fill-available;
+    display: flex;
+
+}
+
+.indexButtons{
+    background-color: rgb(228 37 136);
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    width: auto;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: small;
+    color: white;
+}
+#filters{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.footer1{
+    
+    bottom: 0; 
+   left: 0; 
+   z-index: 10;
+   width: -webkit-fill-available;
+   height: 3rem;
+   background-color:rgb(228 37 136) ;
+   justify-content: center;
+   align-items: center;
+
+}
+#submit{
+    align-self: center;
+}

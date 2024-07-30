@@ -1,0 +1,120 @@
+<%- include("partials/header.ejs") %>
+<body id="landing">
+<!--
+    Landing and search section
+    -->
+    <section>  
+    <div id="backGroundLanding">
+        <img src="/images/icon.svg" id="landingImage">
+        <div class="px-4 text-center">
+            <h1 class="display-4 fw-bold text-body-emphasis">Hired.com</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">Get Hired with Hired.com</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <form action="/search" id="form" method="post">
+                    <input id="keyword" type="text" name="keyword" placeholder="E.g Software Developer" required>
+                    <input id="location" type="text" name="location" placeholder="E.g London">
+                    <div id="filters">
+                      <button type="submit" id="submit" name="submit" type="submit" class="btn btn-primary btn-lg px-4">Search</button>
+                      <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                          Filters
+                        </button>
+                      </p>
+                      <div style="min-height: 120px;">
+                        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                          <div class="card card-body" style="width: 300px;">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="time" value="part" id="flexRadioDefault1" >
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                Part time
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="time" value="full" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                Full Time
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="time" value="" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                Any
+                              </label>
+                            </div>
+                              <label for="minimumSalary">Enter your minimum salary:</label>
+                              <input type="number" class="numberSalary" name="minimumSalary" placeholder="E.g 20,000">
+
+
+                          </div>
+                        </div>
+                      </div>
+                      
+                    
+                      
+                
+                
+                    </div>
+            </form>
+            </div>
+            </div>
+            <div class="overflow-hidden">
+              <div class="container px-5">
+              </div>
+            </div>
+          </div>
+</section> 
+
+<!--
+Details job requested.
+-->
+<section>
+    <%if (locals.content) { %>
+        <div class="infoContainer">
+    <div>
+        <h1><%=content.jobTitle%></h1>
+        <h2><%=content.employerName%></h2>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          Details at a glance
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Salary: <%=salary%></li>
+          <li class="list-group-item">Location: <%=content.locationName%></li>
+          <li class="list-group-item"><%=time%></li>
+          <li class="list-group-item">Expiry Date: <%=content.expirationDate%></li>
+        </ul>
+      </div>
+      <div id="jobDescription">
+      <%-jobDescription%>
+    </div>
+    <div>
+      <button><a href="<%=content.jobUrl%>">Apply Now</a></button>
+    </div>
+
+</div>
+<%}%>
+
+</section>
+ 
+<!--
+recommended course section-->
+<section>
+<!--
+  What I want to do here is use an API call to Udemy and display the recommended course for the key word search -->
+  <%if (locals.coursesData) { %>
+    <div id="coursesFlex">
+    <% coursesData.results.forEach(element => { %>
+        <div class="coursebox" >
+          <a href="https://www.udemy.com<%=element.url%>"><h5><%=element.title%></h5></a>
+          <p><%=element.headline%></p>
+        </div>
+   <% });%>
+  </div>
+<%}%>
+</section>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
