@@ -27,4 +27,19 @@ P.S
 
 I need to learn why my images aren't loading. I'm guessing it's something to do with the filepath... 
 
+Problems I've encountered.
+I've learnt that I need to hide my API keys and client secrets. 
+
+I've tried to do this and use the website OnRender however I can't seem to get it to work. I think I'm doing something wrong with initialising the secret variables.
+I keep getting an API request error, so the API key isn't correct. 
+
+I tried to use it without using secret variables. But it still is getting a bad request error. It works on my local host but somehow the error is coming when I upload to git hub. Unsure here.
+
+Annoying that I can't get it to upload.... ah well, that's whyI'm learning
+
+
+
+
+
+
 
