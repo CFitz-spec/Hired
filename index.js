@@ -10,16 +10,16 @@ const port = 3000;
 
 //API 
 //For reed.co.uk auth is the apikey with empty password
-const API_KEY = '##';
+const API_KEY = process.env.Api_key_reed;
 const API_URL = `https://www.reed.co.uk/api/1.0/`
 const auth = {
     username: API_KEY,
     password:"",
 };
 //For Udemy.com Auth is api key and password. Needs to be encoded with base 64 
-const UDEMY_API_KEY = '####';
+const UDEMY_API_KEY = 'Api_Udemy';
 const UDEMY_API_URL = 'https://www.udemy.com/api-2.0/'
-const UDEMY_API_Password = '####';
+const UDEMY_API_Password = 'Api_Udemy-Password';
 const UdemyAuth = Buffer.from(`${UDEMY_API_KEY}:${UDEMY_API_Password}`).toString('base64');
 
 //Middlewares
