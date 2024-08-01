@@ -33,9 +33,12 @@ I've learnt that I need to hide my API keys and client secrets.
 I've tried to do this and use the website OnRender however I can't seem to get it to work. I think I'm doing something wrong with initialising the secret variables.
 I keep getting an API request error, so the API key isn't correct. 
 
-I tried to use it without using secret variables. But it still is getting a bad request error. It works on my local host but somehow the error is coming when I upload to git hub. Unsure here.
+I tried to use it without using secret variables. But it still is getting a bad request error. It works on my local host but somehow the error is coming when I upload to the Git Hub. Unsure here.
 
-Annoying that I can't get it to upload.... ah well, that's whyI'm learning
+Update 01/08
+I'm still trying to get the .env to work. I seem to be getting /n at the end of my auth. I don't understand why, this seems to be a line break? or new line? but why is it coming and still doesn't explain why it doesn't work if I don't use the .env and just put in the codes. 
+
+Annoying that I can't get it to upload.... ah well, that's why I'm learning
 
 
 
