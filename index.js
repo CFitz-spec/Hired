@@ -14,7 +14,7 @@ const API_KEY = process.env.Api_key_reed;
 const API_URL = `https://www.reed.co.uk/api/1.0/`;
 const reedAuth = Buffer.from(`${API_KEY}:${""}`).toString('base64');
 const auth = {
-    username: `Basic ${reedAuth}`,
+    username: API_KEY,
     password:"",
 };
 //For Udemy.com Auth is api key and password. Needs to be encoded with base 64 
